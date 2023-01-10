@@ -1,0 +1,172 @@
+/* main style sheet for this web site */
+
+/* 
+  colors and why i added them to the website
+  -(250, 247, 244) (off white)- is a background color for a light theme 
+    as there is lots of text on this website
+
+  -#fda863 (orange-used in nav bar and footer)- the orange is there to represent ******
+  -#eb9651 (darker orange -used in nav bar focuse and hover)- same as above^^
+
+  -#1649b6 (blue- used for H2)- the blue is meant for the users to see as it stands 
+    out more then the other colors on the page, this makes the users eyes look at it.
+  -#103481 (darker blue- used for H3)- this blue is used for the same reasons above^^
+
+  -(34, 34, 34) (almost black-used for text in nav bar and footer that links to another page)
+    -nuteral color that is easy for user to read on this webpage
+  -(0,0,0) (black-used for main text on webpage) same reasons as above^^
+
+  I used serif fonts to make my website look traditional and trustworthy
+*/
+
+/* 
+  styles all elements to use the fonts that are listed 
+  below and for the font size to be 62.5% of defult font of the browser being used
+*/
+* {
+  line-height: 140%;
+}
+
+/* 
+  "sets the font size to be 62.5% the defult font size for the browser" -Jess Linsangan 
+  sets the font to georgia and if its not availble use times new roman, and if its 
+  not availbe use the defult serif font
+*/
+html {
+  font-size: 62.5%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/*
+  styles body to have: 
+  -a font size of 1.6 rems (size 16 fonts)
+  -have the color of the background to be an off white with a warm undertone
+  -to have margin (sapce outsie of the content) on the left and right to be 2 rems
+  -made the spacing between the words 0.1rem
+  -the saping between the letters is 0.05 rems
+*/
+body {
+  font-size: 1.6rem;
+  background-color: 250, 247, 244;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
+}
+
+/* 
+  styles items on the nav bars to:
+  -have no list style (no bulet points)
+  -have an orange background
+  -have padding (the space arount the inside of the content before the content itself) of 1.5 rem
+  -have an overflow that is hidden which "makes the box surround the list items"-Jess Linsangan 
+  -have a text size of 2 rems
+*/
+nav ul {
+  list-style-type: none;
+  background-color: #fda863;
+  padding: 1.5rem;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+/* styles list items in an unordered list in the nav bar to go (or float) to the left */
+nav li {
+  float: left;
+}
+
+/*
+  styles anchors in a nav to:
+  - be a block element
+  -have padding (the area between the border and the content) of 1.6 rems
+*/
+nav a {
+  display: block;
+  padding: 1.6rem;
+}
+
+/*
+  colors the focus and hover (when hovering or tabing on an elemnt) of the nav to be orange
+*/
+nav a:focus,
+nav a:hover {
+  background-color: #eb9651;
+}
+
+/* 
+  have the main section of the website to have a margin 
+  (sapce outside of an element) on the left and right to be 1 rem and 
+  padding (the space that seperates the border and content) to be 1 rem
+*/
+main {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+}
+
+/* stlyes the secended largest heading to be blue */
+h2 {
+  color: #1649b6;
+}
+
+/* makes the line spacing of a paragraph to be 2 rems  */
+p {
+  line-height: 2rem;
+  color: black;
+}
+
+/* syles the thid largest heading to be a dark blue */
+h3 {
+  color: #103481;
+}
+
+/* styles the anchors to be black */
+a {
+  color: rgb(34, 34, 34);
+}
+
+/* 
+  styles the largest heading to :
+  -be the color black
+  -to be in the center/middle
+  -to have the text size of 3.2 rem
+*/
+h1 {
+  color: black;
+  text-align: center;
+  font-size: 3.2rem;
+}
+
+/* 
+  styles the footer to  have an orange background and to have 
+  padding (the space between the border and content) to be 1 rem on the top 
+  and bottem and 2rem on the left and right
+*/
+footer {
+  background-color: #fda863;
+  padding: 1rem 2rem;
+}
+
+/* 
+  styles the list items in a unordered 
+  list in the footer to:
+  -have a text alinment to the left 
+  -be an inline elemnent
+  -no have no bullet points
+*/
+footer ul li {
+  text-align: left;
+  /* allows text to be in a line rather then on top of each other (like a list) */
+  display: inline-block;
+  /* gets rid of bullet point */
+  list-style: none;
+}
+
+/* 
+  colors the focus and hover (when hovering or tabing on an elemnt) of 
+  the footer to be a darker orange to improve readabilty 
+*/
+footer a:focus,
+footer a:hover {
+  background-color: #eb9651;
+}
