@@ -3,9 +3,9 @@
   Course: Software development 20S
   Teacher: Mr. Hardman
   School: Pembina Trails Early College
-  Date Last Modified: 1/12/23
+  Date Last Modified: 1/14/23
 -->
-<!-- NOTE TO JORDYN: add alt text -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,9 +15,39 @@
     <title>Today</title>
     <link rel="stylesheet" href="stylesheets/main.css" />
     <style>
+      /* 
+        makes the img apart of a figure to float or move to the right 
+        while giving a the right margin 60 pixle of space
+      */
       figure {
         float: right;
         margin-right: 60px;
+      }
+
+      /* aligns the caption of the figure centerd */
+      figcaption {
+        text-align: center;
+      }
+
+      /* makes the list items in the resource-list a dark blue, underlind, and bolded */
+      #resource-list li a {
+        text-decoration-line: underline;
+        color: #103481;
+        font-weight: bold;
+      }
+
+      /* 
+        makes the header:
+        -sticky: when element "hits" the top of the page it moves with it and stays at the top
+        -have a backgroud color of off white orange
+        top: have 0 pixles from the top
+        z-index: 2: like having on a layer 2 for the website- it sits on top of elements on layer 1
+      */
+      header {
+        position: sticky;
+        background-color: #f3ede9;
+        top: 0;
+        z-index: 2;
       }
     </style>
   </head>
@@ -36,12 +66,21 @@
     <main>
       <section>
         <figure>
-          <img src="images/grand-council-treaty3.jpg" width="130%" />
+          <img
+            src="images/treaty-three-police.png"
+            width="100%"
+            alt="Theaty Three Police logo: blue outer yellow inner circle with an eagle in the middle of the circle. 
+            There are trees and and yellow sky under the eagle. in the middle of the trees there is a teepee. 
+            Under the teepee there is a bear." />
+
+          <figcaption><em>Treaty 3 Police logo</em></figcaption>
         </figure>
       </section>
       <section>
         <h2>Treaty 3 Today</h2>
         <p>What Treaty 3 is like today</p>
+
+        <br />
 
         <div>
           <h3>Population</h3>
@@ -50,15 +89,53 @@
             55,000 sq. miles. This population inculeds 26 First Nations from
             Northwest Ontario and two from southeasetern Manitoba.
           </p>
+
+          <br />
         </div>
 
         <div>
-          <h3>Services</h3>
+          <h3>Treaty Three Police</h3>
           <p>
             As of April 2003, Treaty 3 has it own Police force. Treaty Three
             Police Srtvice (TTPS) is funded by both provincial and federal
             governments.
           </p>
+
+          <p>
+            The TTPS's goal is to have a community-based and result-driven
+            policing with strong relationships from proactive community
+            policing.
+          </p>
+
+          <br />
+        </div>
+
+        <div>
+          <h3>Other Resources</h3>
+          <p>Other resouces that can be helpful to learn more about Treaty 3</p>
+
+          <ul id="resource-list">
+            <li>
+              <a
+                href="https://www.youtube.com/@grandcounciltreaty3594/videos"
+                target="_blank">
+                Grand Council Treaty #3 Youtube Channel
+              </a>
+            </li>
+            <li>
+              <a href="http://gct3.ca/our-nation/" target="blank">
+                Grand Council Treaty #3 Website
+              </a>
+            </li>
+            <li>
+              <a href="https://www.t3ps.ca/" target="blank">
+                Treaty Three Police Website
+              </a>
+            </li>
+          </ul>
+
+          <br />
+          <br />
         </div>
       </section>
     </main>
@@ -77,6 +154,11 @@
           <li>
             <a href="http://gct3.ca/our-nation/" target="blank">
               Grand Council Treaty #3
+            </a>
+          </li>
+          <li>
+            <a href="https://www.t3ps.ca/" target="blank">
+              Treaty Three Police
             </a>
           </li>
         </ul>

@@ -2,7 +2,7 @@
 
 /* 
   colors and why i added them to the website
-  -(250, 247, 244) (off white)- is a background color for a light theme 
+  -#f3ede9 (off white)- is a background color for a light theme 
     as there is lots of text on this website
 
   -#fda863 (orange-used in nav bar and footer)- the orange is there to represent ******
@@ -47,7 +47,7 @@ html {
 */
 body {
   font-size: 1.6rem;
-  background-color: 250, 247, 244;
+  background-color: #f3ede9;
   margin-left: 2rem;
   margin-right: 2rem;
   word-spacing: 0.1rem;
