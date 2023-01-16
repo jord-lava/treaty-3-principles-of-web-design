@@ -6,6 +6,11 @@
   Date Last Modified: 1/14/23
 -->
 
+<!-- 
+  things to add
+  -add comments to ccontent
+  -add comment to animation css
+ -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,7 +21,7 @@
     <link rel="stylesheet" href="stylesheets/main.css" />
     <style>
       /* 
-        makes the img apart of a figure to float or move to the right 
+        makes the img apart of a figure to float or move to the right
         while giving a the right margin 60 pixle of space
       */
       figure {
@@ -36,7 +41,7 @@
         font-weight: bold;
       }
 
-      /* 
+      /*
         makes the header:
         -sticky: when element "hits" the top of the page it moves with it and stays at the top
         -have a backgroud color of off white orange
@@ -48,6 +53,45 @@
         background-color: #f3ede9;
         top: 0;
         z-index: 2;
+      }
+
+      /* 
+        under this comment is for a animation 
+        hover over "Treaty 3" h1 to see animation
+        source: https://blog.hubspot.com/website/css-animation-examples
+      */
+      h1::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+      }
+
+      h1:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      h1::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        inset: 0 0 0 0;
+        background: #fabb86;
+        z-index: -1;
+        transition: transform 0.3s ease;
+      }
+
+      h1 {
+        position: relative;
+      }
+
+      @media (orientation: landscape) {
+        body {
+          grid-auto-flow: column;
+        }
       }
     </style>
   </head>
