@@ -3,14 +3,9 @@
   Course: Software development 20S
   Teacher: Mr. Hardman
   School: Pembina Trails Early College
-  Date Last Modified: 1/14/23
+  Date Last Modified: 1/17/23
 -->
 
-<!-- 
-  things to add
-  -add comments to ccontent
-  -add comment to animation css
- -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,48 +45,66 @@
       */
       header {
         position: sticky;
-        background-color: #f3ede9;
+        background-color: #faf5f2;
         top: 0;
         z-index: 2;
       }
 
       /* 
-        under this comment is for a animation 
-        hover over "Treaty 3" h1 to see animation
+        under this comment is for a transition
+        hover over "Treaty 3" h1 to see transition
+        this only works on the Today page, not the whole website
+        this is the transition we did not cover in class
         source: https://blog.hubspot.com/website/css-animation-examples
       */
-      h1::before {
-        transform: scaleX(0);
-        transform-origin: bottom right;
-      }
 
+      /* 
+        tansform the X (horazontal) from the bottom left to scale to 1 when hovering before the h1 
+        sources: https://www.w3schools.com/cssref/sel_before.php
+      */
       h1:hover::before {
         transform: scaleX(1);
         transform-origin: bottom left;
       }
 
+      /* 
+        before the h1:
+        -transform the X scale to 0
+        -transform starts form the bottom right
+        -displays as block
+        -has an absolute position (styles the same as closest ancestor)
+        -sets the top, left, bottom, right to 0
+        -sets the background to #fabb86 (orange)
+        -the z-index to -1 (layer -1) to the text is ontop of the background
+        -has the transition lasts 0.3 sec and 
+          "ease-specifies a transition effect with a slow start, then fast, 
+          then end slowly"-https://www.w3schools.com/css/css3_transitions.asp
+      */
       h1::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+
         content: " ";
         display: block;
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        inset: 0 0 0 0;
+
+        inset: 0;
         background: #fabb86;
         z-index: -1;
+
+        -ms-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        -moz-transition: transform 0.3s ease;
+        -webkit-transition: transform 0.3s ease;
         transition: transform 0.3s ease;
       }
 
+      /* 
+        sets the position of the h1 to relative:
+        -looks likes its normal but can be shifted from orginal spot (top, bottom, left, and right)
+      */
       h1 {
         position: relative;
-      }
-
-      @media (orientation: landscape) {
-        body {
-          grid-auto-flow: column;
-        }
       }
     </style>
   </head>
@@ -107,7 +120,9 @@
         </ul>
       </nav>
     </header>
+
     <main>
+      <!-- section for the treaty three police figure/image -->
       <section>
         <figure>
           <img
@@ -120,12 +135,14 @@
           <figcaption><em>Treaty 3 Police logo</em></figcaption>
         </figure>
       </section>
+
       <section>
         <h2>Treaty 3 Today</h2>
         <p>What Treaty 3 is like today</p>
 
         <br />
 
+        <!-- population -->
         <div>
           <h3>Population</h3>
           <p>
@@ -137,6 +154,7 @@
           <br />
         </div>
 
+        <!-- treaty three police -->
         <div>
           <h3>Treaty Three Police</h3>
           <p>
@@ -154,6 +172,7 @@
           <br />
         </div>
 
+        <!-- other resources -->
         <div>
           <h3>Other Resources</h3>
           <p>Other resouces that can be helpful to learn more about Treaty 3</p>
@@ -177,15 +196,17 @@
               </a>
             </li>
           </ul>
-
-          <br />
-          <br />
         </div>
       </section>
+
+      <!-- adds space to bottom of page -->
+      <br />
+      <br />
     </main>
 
     <footer>
       <section>
+        <!-- sources -->
         <p>Click these links to view the following sources:</p>
         <ul>
           <li>
@@ -207,6 +228,7 @@
           </li>
         </ul>
       </section>
+
       <!-- copyright symbol -->
       <p>&#169; 2023 Jordyn Lavallee</p>
     </footer>
